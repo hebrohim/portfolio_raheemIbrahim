@@ -8,7 +8,8 @@ module.exports = {
     fontFamily: {
       logoFont:['Pacifico', 'cursive'],
       body:["Shrikhand",'cursive'],
-      textFont:['Rubik', 'sans-serif']
+      textFont:['Rubik', 'sans-serif'],
+      myName:['Russo One', 'sans-serif']
     },
   
   },

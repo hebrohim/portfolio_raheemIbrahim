@@ -15,11 +15,11 @@ const Header = () => {
 
   return (
     <div>
-      <nav className=" px-2 h-[10vh] bg-slate-200 shadow-md shadow-gray-500 flex justify-between items-center md:px-5 ">
+      <nav className=" px-2 h-[10vh] bg-slate-200 shadow-md shadow-gray-500 flex justify-between items-center md:px-5 relative">
         <div className="flex items-center ">
-          <img src={logo} className="w-12 md:w-14 "></img>
+          <img src={logo} className="w-10 md:w-12 "></img>
 
-          <h1 className="font-logoFont -tracking-tighter text-xl text-amber-600 font-">
+          <h1 className="font-logoFont -tracking-tighter text-md md:text-xl text-amber-600 font-">
             Ibrahim
           </h1>
         </div>
@@ -42,9 +42,9 @@ const Header = () => {
      
         <span className="text-amber-500 text-3xl ">
           {showMenuList ? (
-            <HiX onClick={showMenu} />
+            <HiX onClick={showMenu} className = " shadow-md " />
           ) : (
-            <HiMenuAlt3 onClick={showMenu} className = "md:hidden" />
+            <HiMenuAlt3 onClick={showMenu} className = "md:hidden shadow-md " />
           )}
         </span>
         <ul className="hidden md:flex ">
@@ -55,7 +55,7 @@ const Header = () => {
         </ul>
       </nav>
       {showMenuList ? (
-        <ul className="  w-1/2  py-10 flex flex-col items-center bg-[#dfdddd21] rounded-b-lg shadow-md shadow-black absolute left-1/4 top-[10vh]b ">
+        <ul className="  w-1/2  py-10 flex flex-col items-center bg-[#dfdddda1] rounded-b-lg shadow-md shadow-black absolute right-0 top-[10vh] ">
           {menuItems.map((menuItem) => {
             return (
               <li className="my-3 px-2 font-bold hover:border-r-2 hover:border-b-2 hover:shadow-md rounded-md border-amber-500  text-slate-900 md:mb-10 md:text-xl">
