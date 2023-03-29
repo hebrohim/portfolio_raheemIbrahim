@@ -16,8 +16,8 @@ const Header = () => {
 
   return (
     <div>
-      <nav className=" px-2 h-[10vh] bg-slate-200 shadow-md shadow-gray-500 flex justify-between items-center md:px-5 relative">
-        <div className="flex items-center ">
+      <nav className="fixed top-0 w-screen px-2 h-[10vh] bg-slate-200 shadow-md shadow-gray-500 flex justify-between items-center md:px-5">
+        <div className="flex items-center  ">
           <img src={logo} className="w-10 md:w-12 "></img>
 
           <h1 className="font-logoFont -tracking-tighter text-md md:text-xl text-amber-600 font-">
@@ -58,7 +58,7 @@ const Header = () => {
         </ul>
       </nav>
       {showMenuList ? (
-        <ul className="  w-screen h-screen  py-10 flex flex-col items-center bg-[#dfddddcb] rounded-b-lg shadow-md shadow-black absolute right-0 top-[10vh] ">
+        <ul className="  w-screen h-[90vh]  py-10 flex flex-col items-center bg-[#dfddddcb] rounded-b-lg shadow-md shadow-black absolute right-0 top-[10vh] ">
           {menuItems.map((menuItem) => {
             return (
               <li className=" text-xl my-3 px-5 font-bold hover:border-r-2 hover:border-b-2 hover:shadow-md rounded-md border-amber-500  text-slate-900 md:mb-10 md:text-xl">
