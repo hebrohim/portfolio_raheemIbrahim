@@ -3,6 +3,7 @@ import { React, useState } from "react";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import logo from "./images/icons8-developer-80.png";
 import { HiMenuAlt3, HiMail, HiX } from "react-icons/hi";
+import { MdDarkMode } from "react-icons/md";
 
 const Header = () => {
   const menuItems = ["Home", "About", "Projects", "Contact"];
@@ -38,6 +39,7 @@ const Header = () => {
             <FaGithub className="text-slate-900 text-md cursor-pointer" />
           </li>
         </ul>
+        <span className="text-sm mr-[1.4rem] flex items-center text-amber-900 font-medium absolute right-0 bottom-0 hover:cursor-pointer hover:text-black"> <MdDarkMode/>darkMode</span> 
 
      
         <span className="text-amber-500 text-3xl ">
@@ -47,6 +49,7 @@ const Header = () => {
             <HiMenuAlt3 onClick={showMenu} className = "md:hidden shadow-md " />
           )}
         </span>
+        
         <ul className="hidden md:flex ">
             <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold">Home</li>
             <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold">About</li>
@@ -55,10 +58,10 @@ const Header = () => {
         </ul>
       </nav>
       {showMenuList ? (
-        <ul className="  w-1/2  py-10 flex flex-col items-center bg-[#dfdddda1] rounded-b-lg shadow-md shadow-black absolute right-0 top-[10vh] ">
+        <ul className="  w-screen h-screen  py-10 flex flex-col items-center bg-[#dfddddcb] rounded-b-lg shadow-md shadow-black absolute right-0 top-[10vh] ">
           {menuItems.map((menuItem) => {
             return (
-              <li className="my-3 px-2 font-bold hover:border-r-2 hover:border-b-2 hover:shadow-md rounded-md border-amber-500  text-slate-900 md:mb-10 md:text-xl">
+              <li className=" text-xl my-3 px-5 font-bold hover:border-r-2 hover:border-b-2 hover:shadow-md rounded-md border-amber-500  text-slate-900 md:mb-10 md:text-xl">
                 {menuItem}
               </li>
             );

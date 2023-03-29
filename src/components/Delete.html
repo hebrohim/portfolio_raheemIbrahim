@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            background: red;
+            height: 90vh;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        #one{
+            background-color: aqua;
+            grid-row-start: 1;
+            grid-row-end: 4;
+        }
+        #two{
+            background-color: rgb(106, 106, 106);
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        #three{
+            background-color: rgb(115, 255, 0);
+        }
+        #four{
+            background-color: rgb(255, 225, 0);
+        }
+        #five{
+            background-color: rgb(170, 0, 212);
+        }
+        #six{
+            background-color: rgb(31, 3, 3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class ="wrapper">
+
+       <div id = "one">1</div> 
+       <div id = "two">2</div> 
+       <div id = "three">3</div> 
+       <div id = "four">4</div> 
+       <div id = "five">5</div> 
+       <div id = "six">6</div> 
+    </div>
+    
+</body>
+</html>
