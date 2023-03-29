@@ -8,7 +8,8 @@
 @tailwind utilities;
 
 body{
-    background-color:  rgb(243 244 246);
+    background-color:  rgb(237, 241, 250);
     margin: 0;
     padding: 0;
+    
 }
