@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import AboutMe from "./components/AboutMe";
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
+import Skills from "./components/Skills";
 
 function App() {
 
@@ -9,6 +11,8 @@ function App() {
 <div>
 <Header/>
 <HeroSection/>
+<AboutMe/>
+{/* <Skills/> */}
   </div>
   );
 }
