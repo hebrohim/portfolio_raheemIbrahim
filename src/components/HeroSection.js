@@ -7,7 +7,7 @@ import { HiMenuAlt3, HiMail, HiX } from "react-icons/hi";
 const HeroSection = () => {
   return (
     <div className="h-[90vh] w-full md:flex">
-      <div className="flex flex-col w-full items-center py-20 md:flex-row-reverse md:justify-around">
+      <div className="flex my-20 flex-col w-full items-center py-20 md:flex-row-reverse md:justify-around">
         <img
           src={me}
           className="w-40 h-40 rounded-full object-cover border-4 border-amber-600 p-1 md:w-60 md:h-60 md:border-4"
