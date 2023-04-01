@@ -11,7 +11,7 @@ module.exports = {
       textFont:['Rubik', 'sans-serif'],
       myName:['Russo One', 'sans-serif']
     },
-  
+
   },
   plugins: [],
 }

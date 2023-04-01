@@ -12,7 +12,7 @@ function App() {
 <Header/>
 <HeroSection/>
 <AboutMe/>
-{/* <Skills/> */}
+<Skills/>
   </div>
   );
 }
