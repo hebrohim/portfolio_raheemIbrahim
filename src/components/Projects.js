@@ -1,23 +1,43 @@
-import React from 'react'
-import {FaBriefcase} from "react-icons/fa";
-const Projects = () => {
+import { React, useEffect, useState } from "react";
+import { MdExpandMore,MdExpandLess} from "react-icons/md";
+const Projects = ({project,loading}) => {
+    const [showContent, setshowContent] = useState(true)
+
+
+    let {id,name,description,technology,screenShot,github,liveProject} = project
+  // console.log(projects)
+
   return (
-    <div>
- <section className="mb-5">
-        <h1 className="text-xl text-center font-textFont font-semibold text-slate-900 my-1 md:text-2xl md:my-3">
-          Projects
-        </h1>
-        <div className="flex items-center justify-center ">
-          <span className="w-10 bg-amber-600 h-1 md:w-12"></span>{" "}
-          <FaBriefcase className="text-2xl text-slate-900 mx-1 md:text-3xl" />
-          <span className="w-12 bg-amber-600 h-1 md:w-12"> </span>
-        </div>
-      </section>
+    <div className="px-5">
+    
+ 
+      <section>
+        {loading?<h1>loading data ...</h1>:
+        
+        
+            
+                 <div className="w-[90vw] mb-5" key={id}>
+                <img src= {screenShot} className= "w-full rounded-t-2xl object-cover "/>
+{
+    showContent?<button onClick={()=>{setshowContent(!showContent)}} className= "bg-amber-600 p-2 text-xl rounded-md flex items-center mt-4 font-semibold">Expand <MdExpandMore/></button>:
+                <div className=" p-5 rounded-b-2xl bg-white">
+                    <h4 className="font-logoFont capitalize text-center font-bold text-2xl">{name}</h4>
+                    <p className="font-semibold">
+                        {description}
+                    </p>
+                    <button onClick={()=>{setshowContent(!showContent)}} className= "bg-amber-600 p-2 text-xl rounded-md flex items-center mt-4 font-semibold">Hgit aide <MdExpandLess/></button>
+                </div>
 
-
-
-    </div>
-  )
 }
+                
+                </div>
+        
+        
+        
+        }
+      </section> 
+    </div>
+  );
+};
 
-export default Projects
+export default Projects;
