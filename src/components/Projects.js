@@ -25,7 +25,7 @@ const Projects = ({project,loading}) => {
                     <p className="font-semibold">
                         {description}
                     </p>
-                    <button onClick={()=>{setshowContent(!showContent)}} className= "bg-amber-600 p-2 text-xl rounded-md flex items-center mt-4 font-semibold">Hgit aide <MdExpandLess/></button>
+                    <button onClick={()=>{setshowContent(!showContent)}} className= "bg-amber-600 p-2 text-xl rounded-md flex items-center mt-4 font-semibold">Hide <MdExpandLess/></button>
                 </div>
 
 }
