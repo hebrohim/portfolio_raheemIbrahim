@@ -7,21 +7,17 @@ import HeroSection from "./components/HeroSection";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import { FaBriefcase } from "react-icons/fa";
-
+import Contact from "./components/Contact";
+import { Data } from "./components/Data";
+ 
 function App() {
-  const baseURL = "http://localhost:3000/projects";
+  
 
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState(Data);
 
   const [loading, setloading] = useState(true);
 
-  useEffect(() => {
-   setloading(true)
-    axios.get(baseURL).then((response) => {
-      setProjects(response.data);
-      setloading(false)
-    });
-  }, []);
+
  
   return (
 <div>
@@ -38,12 +34,17 @@ function App() {
           <FaBriefcase className="text-2xl text-slate-900 mx-1 md:text-3xl" />
           <span className="w-12 bg-amber-600 h-1 md:w-12"> </span>
         </div>
+        <h4 className="font-body capitalize text-center font-bold text-md  ">view some of my work</h4>
       </section>
       <div className="flex flex-wrap justify-center">
 {projects.map((project)=> <Projects loading ={loading} project = {project}/>)}
 
 </div>
+
+
+<Contact/>
   </div>
+  
   );
 }
 
