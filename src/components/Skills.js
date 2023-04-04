@@ -40,7 +40,7 @@ const Skills = () => {
 
       {/* SKILL CARDS */}
       <section className="grid grid-cols-2 justify-items-center z-0 md:mx-32 md:grid-cols-3">
-        <Card icon={<FaHtml5 className="text-amber-600 text-7xl" />}  name = "Html"/>
+        <Card icon={<FaHtml5 className="text-amber-600 text-7xl"  />}  name = "Html"/>
         <Card icon={<FaCss3Alt className="text-amber-600 text-7xl" />} name = "Css" />
         <Card icon={<FaBootstrap className="text-amber-600 text-7xl" />} name = "Bootstrap" />
         <Card icon={<FaSass className="text-amber-600 text-7xl" />} name = "Sass" />

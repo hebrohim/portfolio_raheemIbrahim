@@ -42,7 +42,7 @@
       "name": "Country Api",
       "description": "A react application that shows details about ALL countries across the word including their flag,population,currency etc",
       "technology": ["React","TailwindCss"],
-      "screenShot":"https://i.postimg.cc/XvrwYDrQ/scientific-Calculator.png",
+      "screenShot":"https://i.postimg.cc/c1vsywht/country-Api.png",
       "liveProject":"rest-countries-api-hebrohim.vercel.app",
       "github":"https://i.postimg.cc/QCVPkKqj/country-Api.png"
     },
