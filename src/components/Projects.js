@@ -8,35 +8,37 @@ const Projects = ({project,loading}) => {
   // console.log(projects)
 
   return (
-    <div className="px-5">
+   
     
- 
-      <section>
-        {loading?<h1>loading data ...</h1>:
+ <>
+     
+      
+      {loading?<h1>loading data ...</h1>:
         
-        
-            
-                 <div className="w-[90vw] mb-5" key={id}>
-                <img src= {screenShot} className= "w-full rounded-t-2xl object-cover "/>
+           
+                 <div className="w-[80vw] flex flex-col mb-5 md:w-[30vw] md:mx-2 " key={id}>
+                <h4 className="font-logoFont capitalize text-center font-bold text-2xl mb-2">{name}</h4>
+                <img src= {screenShot} className= "w-full h-96  rounded-t-2xl object-cover"/>
 {
-    showContent?<button onClick={()=>{setshowContent(!showContent)}} className= "bg-amber-600 p-2 text-xl rounded-md flex items-center mt-4 font-semibold">Expand <MdExpandMore/></button>:
+    showContent?<button onClick={()=>{setshowContent(!showContent)}} className= " bg-amber-600 p-2 text-xl rounded-b-2xl flex justify-center items-center font-semibold">Expand <MdExpandMore/></button>:
                 <div className=" p-5 rounded-b-2xl bg-white">
-                    <h4 className="font-logoFont capitalize text-center font-bold text-2xl">{name}</h4>
                     <p className="font-semibold">
                         {description}
                     </p>
-                    <button onClick={()=>{setshowContent(!showContent)}} className= "bg-amber-600 p-2 text-xl rounded-md flex items-center mt-4 font-semibold">Hide <MdExpandLess/></button>
+                    <button onClick={()=>{setshowContent(!showContent)}} className= "w-full bg-amber-600 p-2 text-xl rounded-md flex items-center mt-4 font-semibold flex justify-center items-center ">Hide <MdExpandLess/></button>
                 </div>
 
 }
                 
                 </div>
+
+              
         
         
         
         }
-      </section> 
-    </div>
+  </>
+ 
   );
 };
 

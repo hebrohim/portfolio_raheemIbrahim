@@ -39,7 +39,10 @@ function App() {
           <span className="w-12 bg-amber-600 h-1 md:w-12"> </span>
         </div>
       </section>
+      <div className="flex flex-wrap justify-center">
 {projects.map((project)=> <Projects loading ={loading} project = {project}/>)}
+
+</div>
   </div>
   );
 }
