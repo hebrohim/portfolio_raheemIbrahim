@@ -9,7 +9,7 @@ import Skills from "./components/Skills";
 import { FaBriefcase } from "react-icons/fa";
 import Contact from "./components/Contact";
 import { Data } from "./components/Data";
- 
+import Footer from "./components/Footer";
 function App() {
   
 
@@ -43,7 +43,10 @@ function App() {
 
 
 <Contact/>
+<Footer/>
   </div>
+
+
   
   );
 }
