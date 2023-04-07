@@ -30,15 +30,15 @@ const [displayHover, setdisplayHover] = useState(false)
                 
                 <img src= {screenShot} className= "w-full h-full  object-fill md:h-72" />
               { displayHover?
-               <div className="bg-[#ffffffc7] absolute w-full rounded-t-2xl h-[15vh] md:h-[30vh] p-20">
-              <a href={github}><span className="text-xl font-semibold flex items-center">Source code<FaGithub /></span></a> 
+               <div className="bg-[#ffffffda] text-amber-600 absolute w-full rounded-t-2xl h-1/2 md:h-[30vh] p-20">
+              <a href={github}><span className="text-md font-semibold flex items-center">Source code<FaGithub className="ml-1"/></span></a> 
                </div> :null
                 }
 
    { showContent?<button onClick={()=>{setshowContent(!showContent); displayHoverBox()}} className= " bg-amber-600 p-2 text-xl rounded-b-2xl flex justify-center items-center font-semibold">Expand <MdExpandMore/></button>:
     <div>
                 <div className=" p-5 bg-white">
-                    <p className="font-semibold">
+                    <p className="text-sm text-justify md:text-base ">
                         {description}
                     </p>
                 </div>
