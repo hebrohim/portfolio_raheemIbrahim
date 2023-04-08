@@ -16,7 +16,7 @@ const Header = ({darkMode,setdarkMode}) => {
 
   return (
     <div>
-      <nav className="fixed top-0 w-screen z-10 px-2 h-[10vh] bg-slate-200 shadow-md shadow-gray-500 flex justify-between items-center md:px-5 dark:bg-gray-700 dark:border-white">
+      <nav className="fixed top-0 w-screen z-10 px-2 h-[10vh] bg-slate-200 shadow-md shadow-gray-500 flex justify-between items-center md:px-5 dark:bg-gray-600 dark:border-white">
         <div className="flex items-center  ">
           <img src={logo} className="w-10 md:w-12 "></img>
 
@@ -39,7 +39,7 @@ const Header = ({darkMode,setdarkMode}) => {
             <FaGithub className="text-slate-900 text-md cursor-pointer dark:text-white" />
           </li>
         </ul>
-        <span className="text-sm mr-[1.4rem] flex items-center text-black font-medium absolute right-0 bottom-0 hover:cursor-pointer hover:text-black" onClick={()=>{setdarkMode(!darkMode)}}> <MdDarkMode/>
+        <span className="text-sm mr-[1.4rem] flex items-center text-black font-medium absolute right-0 bottom-0 hover:cursor-pointer hover:text-black dark:text-white" onClick={()=>{setdarkMode(!darkMode)}}> <MdDarkMode/>
        { darkMode?
         "lightMode":"DarkMode"}
         </span> 
