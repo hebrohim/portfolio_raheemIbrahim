@@ -15,19 +15,19 @@ const Contact = () => {
       </div>
   <form className='my-5  w-[80vw]  py-10 px-5  mx-auto box-border rounded-2xl shadow-2xl'>
     <div className="user-box ">
-      <input required="" name="" type="text"/>
+      <input required="" name="" type="text" className='dark:text-white'/>
       <label className='dark:text-white' >Full name</label>
     </div>
     <div className="user-box ">
-      <input required="" name="" type="email"/>
+      <input required="" name="" type="email" className='dark:text-white'/>
       <label className='dark:text-white'>Email</label>
     </div>
     <div className="user-box ">
-      <input required="" name="" type="email"/>
+      <input required="" name="" type="email" className='dark:text-white'/>
       <label className='dark:text-white'>Subject</label>
     </div>
     <div className="user-box ">
-      <input required="" name="" type="email"/>
+      <input required="" name="" type="email" className='dark:text-white'/>
       <label className='dark:text-white'> your message</label>
     </div>
     <a href="#" className='dark:text-white'>
