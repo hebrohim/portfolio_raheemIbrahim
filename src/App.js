@@ -17,15 +17,17 @@ function App() {
 
   const [loading, setloading] = useState(true);
 
-
+const [darkMode, setdarkMode] = useState(false)
  
   return (
-<div>
-<Header/>
+    <div className={darkMode?"dark":""}>
+<div className="dark:bg-gray-700" >
+<Header darkMode = {darkMode} setdarkMode = {setdarkMode}/>
 <HeroSection/>
 <AboutMe/>
 <Skills/>
 <section className="mb-5">
+ 
         <h1 className="text-xl text-center font-textFont font-semibold text-slate-900 my-1 md:text-2xl md:my-3">
           Projects
         </h1>
@@ -43,10 +45,10 @@ function App() {
 
 
 <Contact/>
-<Footer/>
+<Footer darkMode = {darkMode} setdarkMode = {setdarkMode}/>
   </div>
 
-
+  </div>
   
   );
 }

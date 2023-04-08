@@ -17,7 +17,7 @@ const currentYear = new Date().getFullYear()
 // console.log(currentYear);
 
   return (
-    <div className="h-[10vh] bg-slate-200 shadow-xl shadow-gray-500 flex flex-col justify-around items-center md:px-10 md:flex-row">
+    <div className="h-[10vh] bg-slate-200 shadow-xl shadow-gray-500 flex flex-col justify-around items-center md:px-10 md:flex-row dark:bg-gray-700">
 
        <p className="font-semibold">
        Built with React,TailwindCss and Framer Motion
