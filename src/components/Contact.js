@@ -6,31 +6,31 @@ const Contact = () => {
 
 <div className="login-box">
     <div className='flex flex-col justify-center items-center'>
-  <h1 className='text-xl font-textFont font-semibold text-slate-900 my-1 md:text-2xl md:my-3'>let's work together </h1>
+  <h1 className='text-xl font-textFont font-semibold text-slate-900 my-1 md:text-2xl md:my-3 dark:text-white'>let's work together </h1>
         <div className='flex items-center'>
 
-      <span className='w-10 bg-amber-600 h-1 md:w-12'></span>  <MdPermContactCalendar className='text-2xl text-slate-900 mx-1 md:text-3xl'/><span className='w-12 bg-amber-600 h-1 md:w-12'> </span>
+      <span className='w-10 bg-amber-600 h-1 md:w-12'></span>  <MdPermContactCalendar className='text-2xl text-slate-900 mx-1 md:text-3xl dark:text-white'/><span className='w-12 bg-amber-600 h-1 md:w-12'> </span>
       </div>
 
       </div>
   <form className='my-5  w-[80vw]  py-10 px-5  mx-auto box-border rounded-2xl shadow-2xl'>
-    <div className="user-box">
+    <div className="user-box ">
       <input required="" name="" type="text"/>
-      <label>Full name</label>
+      <label className='dark:text-white' >Full name</label>
     </div>
-    <div className="user-box">
+    <div className="user-box ">
       <input required="" name="" type="email"/>
-      <label>Email</label>
+      <label className='dark:text-white'>Email</label>
     </div>
-    <div className="user-box">
+    <div className="user-box ">
       <input required="" name="" type="email"/>
-      <label>Subject</label>
+      <label className='dark:text-white'>Subject</label>
     </div>
-    <div className="user-box">
+    <div className="user-box ">
       <input required="" name="" type="email"/>
-      <label> your message</label>
+      <label className='dark:text-white'> your message</label>
     </div>
-    <a href="#">
+    <a href="#" className='dark:text-white'>
       <span></span>
       <span></span>
       <span></span>

@@ -7,7 +7,7 @@ const Card = ({ icon, name }) => {
       <div className="card">
         <span>{icon}</span>
       </div>
-      <p className="font-logoFont text-2xl text-slate-900 font-bold">{name}</p>
+      <p className="font-logoFont text-2xl text-slate-900 font-bold dark:text-white">{name}</p>
     </div>
   );
 };

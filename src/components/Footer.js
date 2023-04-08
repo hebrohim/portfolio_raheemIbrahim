@@ -17,13 +17,13 @@ const currentYear = new Date().getFullYear()
 // console.log(currentYear);
 
   return (
-    <div className="h-[10vh] bg-slate-200 shadow-xl shadow-gray-500 flex flex-col justify-around items-center md:px-10 md:flex-row dark:bg-gray-700">
+    <div className="h-[10vh] bg-slate-200 shadow-xl shadow-gray-500 flex flex-col justify-around items-center md:px-10 md:flex-row dark:bg-gray-700 dark:text-white">
 
        <p className="font-semibold">
        Built with React,TailwindCss and Framer Motion
        </p>
 
-       <p className="font-semibold">
+       <p className="font-semibold dark:text-white">
        &copy;Raheem Ibrahim {currentYear}
     </p>
     </div>

@@ -28,12 +28,12 @@ const Skills = () => {
   return (
     <div className=" p-5 text-center">
       <section className="mb-5">
-        <h1 className="text-xl font-textFont font-semibold text-slate-900 my-1 md:text-2xl md:my-3">
+        <h1 className="text-xl font-textFont font-semibold text-slate-900 my-1 md:text-2xl md:my-3 dark:text-white">
           What i can do for you
         </h1>
         <div className="flex items-center justify-center ">
           <span className="w-10 bg-amber-600 h-1 md:w-12"></span>{" "}
-          <RiCodeBoxFill className="text-2xl text-slate-900 mx-1 md:text-3xl" />
+          <RiCodeBoxFill className="text-2xl text-slate-900 mx-1 md:text-3xl dark:text-white" />
           <span className="w-12 bg-amber-600 h-1 md:w-12"> </span>
         </div>
       </section>

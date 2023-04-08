@@ -26,20 +26,20 @@ const Header = ({darkMode,setdarkMode}) => {
         </div>
 
         <ul className=" hidden  md:flex w-full justify-end mr-10">
-          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2">
-            <FaWhatsapp className="text-slate-900 text-md cursor-pointer" />
+          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
+            <FaWhatsapp className="text-slate-900 text-md cursor-pointer dark:text-white" />
           </li>
-          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2">
-            <HiMail className="text-slate-900 text-md cursor-pointer" />
+          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
+            <HiMail className="text-slate-900 text-md cursor-pointer dark:text-white" />
           </li>
-          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2">
-            <FaLinkedin className="text-slate-900 text-md cursor-pointer" />
+          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
+            <FaLinkedin className="text-slate-900 text-md cursor-pointer dark:text-white" />
           </li>
-          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2">
-            <FaGithub className="text-slate-900 text-md cursor-pointer" />
+          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
+            <FaGithub className="text-slate-900 text-md cursor-pointer dark:text-white" />
           </li>
         </ul>
-        <span className="text-sm mr-[1.4rem] flex items-center text-amber-900 font-medium absolute right-0 bottom-0 hover:cursor-pointer hover:text-black" onClick={()=>{setdarkMode(!darkMode)}}> <MdDarkMode/>
+        <span className="text-sm mr-[1.4rem] flex items-center text-black font-medium absolute right-0 bottom-0 hover:cursor-pointer hover:text-black" onClick={()=>{setdarkMode(!darkMode)}}> <MdDarkMode/>
        { darkMode?
         "lightMode":"DarkMode"}
         </span> 
@@ -54,10 +54,10 @@ const Header = ({darkMode,setdarkMode}) => {
         </span>
         
         <ul className="hidden md:flex ">
-            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold">Home</li>
-            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold">About</li>
-            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold">Projects</li>
-            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold">Contact</li> 
+            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Home</li>
+            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">About</li>
+            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Projects</li>
+            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Contact</li> 
         </ul>
       </nav>
       {showMenuList ? (
