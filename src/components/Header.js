@@ -8,13 +8,21 @@ import { motion } from "framer-motion";
 
 const navBarAnimation = {
   hidden:{y:-300},
-  visible:{y:0,transition:{type:"spring",stiffness:300,delay:.5}}
+  visible:{y:0,transition:{type:"spring",stiffness:300}}
 }
 
 const navContentAnimation = {
   hidden:{y:-300},
-  visible:{y:0,transition:{type:"spring",delay:2,duration:1,stiffness:500 }}
+  visible:{y:0,transition:{type:"spring",duration:1,stiffness:500 }}
 }
+
+// BUTTON ANIMATION
+const buttonAnimation = {
+  whileHover:{scale:1.1 ,boxShadow:"0px 0px 10px black",originX:0},
+    transition :{type:"spring" ,stiffness:300}
+}
+
+// HEADER COMPONENTS STARTS HERE
 
 const Header = ({darkMode,setdarkMode}) => {
   const menuItems = ["Home", "About", "Projects", "Contact"];
@@ -29,7 +37,7 @@ const Header = ({darkMode,setdarkMode}) => {
     <motion.div>
       <motion.nav variants={navBarAnimation} initial ="hidden" animate="visible" className="fixed top-0 w-screen z-10 px-2 h-[10vh] bg-slate-200 shadow-md shadow-gray-500 flex justify-between items-center md:px-5 dark:bg-gray-600 dark:border-white">
         <motion.div  variants={navContentAnimation} initial ="hidden" animate="visible" className="flex items-center  " >
-          <motion.img initial={{rotate:0,skew:0}} animate = {{rotate:360,skew:180}} transition= {{duration:6}} src={logo} className="w-10 md:w-12 "/>
+          <motion.img whileHover={{cursor: "grab"}}  initial={{rotate:0,skew:0}} animate = {{rotate:360,skew:180}} transition= {{duration:6}} src={logo} drag dragConstraints ={{left:0,right:500,top:0,bottom:500}}   className="w-10 md:w-12" />
 
           <motion.h1  initial={{rotate:0,skew:0}} animate = {{rotate:360,skew:180}} transition= {{duration:6}} className="font-logoFont -tracking-tighter text-md md:text-xl text-amber-600 font-">
             Ibrahim
@@ -37,18 +45,18 @@ const Header = ({darkMode,setdarkMode}) => {
         </motion.div>
 
         <motion.ul variants={navContentAnimation} initial ="hidden" animate="visible"  className=" hidden  md:flex w-full justify-end mr-10">
-          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
+          <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
             <FaWhatsapp className="text-slate-900 text-md cursor-pointer dark:text-white" />
-          </li>
-          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
+          </motion.li>
+          <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
             <HiMail className="text-slate-900 text-md cursor-pointer dark:text-white" />
-          </li>
-          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
+          </motion.li>
+          <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
             <FaLinkedin className="text-slate-900 text-md cursor-pointer dark:text-white" />
-          </li>
-          <li className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
+          </motion.li>
+          <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
             <FaGithub className="text-slate-900 text-md cursor-pointer dark:text-white" />
-          </li>
+          </motion.li>
         </motion.ul>
         <motion.span variants={navContentAnimation} initial ="hidden" animate="visible"   className="text-sm mr-[1.4rem] flex items-center text-black font-medium absolute right-0 bottom-0 hover:cursor-pointer hover:text-black dark:text-white" onClick={()=>{setdarkMode(!darkMode)}}> <MdDarkMode/>
        { darkMode?
@@ -56,19 +64,19 @@ const Header = ({darkMode,setdarkMode}) => {
         </motion.span> 
 
      
-        <span className="text-amber-500 text-3xl ">
+        <motion.span variants={navContentAnimation} initial ="hidden" animate="visible" className="text-amber-500 text-3xl ">
           {showMenuList ? (
             <HiX onClick={showMenu} className = " shadow-md " />
           ) : (
             <HiMenuAlt3 onClick={showMenu} className = "md:hidden shadow-md " />
           )}
-        </span>
+        </motion.span>
         
         <motion.ul variants={navContentAnimation} initial ="hidden" animate="visible"  className="hidden md:flex ">
-            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Home</li>
-            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">About</li>
-            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Projects</li>
-            <li className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Contact</li> 
+            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Home</motion.li>
+            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">About</motion.li>
+            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Projects</motion.li>
+            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Contact</motion.li> 
         </motion.ul>
       </motion.nav>
       {showMenuList ? (
