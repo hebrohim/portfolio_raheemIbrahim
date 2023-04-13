@@ -18,6 +18,19 @@ import {
   SiReact,
 } from "react-icons/si";
 import { TbBrandFramerMotion, TbJson } from "react-icons/tb";
+import {motion} from "framer-motion"
+import { MdVisibility } from "react-icons/md";
+
+
+
+// const containerAnimation = {
+//   hidden:},
+//   visible:{x:0,
+//     transition:{type:"spring", stiffness:100,delay:0.9,duration:2,when:"beforeChildren"}}
+  
+// }
+
+
 
 const Skills = () => {
   const mySkills = [
@@ -26,7 +39,7 @@ const Skills = () => {
     },
   ];
   return (
-    <div className=" p-5 text-center">
+    <motion.div initial ={{opacity:0,x:"0"}} whileInView={{opacity:1,x:0,transition:{delay:1,duration:5,when :"beforeChildren"}}}  className=" p-5 text-center">
       <section className="mb-5">
         <h1 className="text-xl font-textFont font-semibold text-slate-900 my-1 md:text-2xl md:my-3 dark:text-white">
           What i can do for you
@@ -39,7 +52,7 @@ const Skills = () => {
       </section>
 
       {/* SKILL CARDS */}
-      <section className="grid grid-cols-2 justify-items-center z-0 md:mx-32 md:grid-cols-3">
+      <motion.section className="grid grid-cols-2 justify-items-center z-0 md:mx-32 md:grid-cols-3">
         <Card icon={<FaHtml5 className="text-amber-600 text-7xl"  />}  name = "Html"/>
         <Card icon={<FaCss3Alt className="text-amber-600 text-7xl" />} name = "Css" />
         <Card icon={<FaBootstrap className="text-amber-600 text-7xl" />} name = "Bootstrap" />
@@ -53,8 +66,8 @@ const Skills = () => {
         <Card icon={<TbJson className="text-amber-600 text-7xl" />} name = "Json" />
         <Card icon={<FaGitAlt className="text-amber-600 text-7xl" />} name = "Git" />
         <Card icon={<FaFigma className="text-amber-600 text-7xl" />} name = "Figma" />
-      </section>
-    </div>
+      </motion.section>
+    </motion.div>
   );
 };
 

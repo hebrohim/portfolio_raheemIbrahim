@@ -1,8 +1,12 @@
 import React from 'react'
 import { ImUserTie } from "react-icons/im";
+import {motion} from "framer-motion"
+
 const AboutMe = () => {
+
+
   return (
-    <div className='h-[50vh] p-5 flex items-center flex-col md:px-32 '>
+    <motion.div initial ={{opacity:0,x:"200"}} whileInView={{opacity:1,x:0,transition:{delay:1,duration:3}}} className='h-[50vh] p-5 flex items-center flex-col md:px-32 '>
 
         <h1 className='text-xl font-textFont font-semibold text-slate-900 my-1 md:text-2xl md:my-3 dark:text-white'>About Me </h1>
         <div className='flex items-center'>
@@ -14,7 +18,7 @@ const AboutMe = () => {
 
         </p>
         <div className='mt-3 underline w-[90%] h-[0.1rem] bg-[#dfddddd8] md:h-[0.2rem]'></div>
-    </div>
+    </motion.div>
   )
 }
 
