@@ -32,6 +32,7 @@ const [displayHover, setdisplayHover] = useState(false)
               { displayHover?
                <div className="bg-[#ffffffda] text-amber-600 absolute w-full rounded-t-2xl h-1/2 md:h-[30vh] p-20">
               <a href={github}><span className="text-md font-semibold flex items-center">Source code<FaGithub className="ml-1"/></span></a> 
+              <a href={liveProject}><span className="text-md font-semibold flex items-center">link to live Project<FaGithub className="ml-1"/></span></a> 
                </div> :null
                 }
 
