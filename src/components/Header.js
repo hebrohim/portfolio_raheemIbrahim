@@ -80,7 +80,7 @@ const Header = ({darkMode,setdarkMode}) => {
         </motion.ul>
       </motion.nav>
       {showMenuList ? (
-        <ul className="  w-screen h-[90vh]  py-10 flex flex-col items-center bg-[#dfddddcb] rounded-b-lg shadow-md shadow-black absolute right-0 top-[10vh] ">
+        <ul className="  w-screen h-[90vh]  py-10 flex flex-col items-center bg-[#dfddddcb] rounded-b-lg shadow-md shadow-black absolute right-0 top-[10vh] z-20">
           {menuItems.map((menuItem) => {
             return (
               <li className=" text-xl my-3 px-5 font-bold hover:border-r-2 hover:border-b-2 hover:shadow-md rounded-md border-amber-500  text-slate-900 md:mb-10 md:text-xl">
