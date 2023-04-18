@@ -5,7 +5,7 @@ import logo from "./images/icons8-developer-80.png";
 import { HiMenuAlt3, HiMail, HiX } from "react-icons/hi";
 import { MdDarkMode } from "react-icons/md";
 import { motion } from "framer-motion";
-
+import { Link } from "react-scroll";
 const navBarAnimation = {
   hidden:{y:-300},
   visible:{y:0,transition:{type:"spring",stiffness:300}}
@@ -25,7 +25,7 @@ const buttonAnimation = {
 // HEADER COMPONENTS STARTS HERE
 
 const Header = ({darkMode,setdarkMode}) => {
-  const menuItems = ["Home", "About", "Projects", "Contact"];
+
 
   const [showMenuList, setShowMenuList] = useState(false);
 
@@ -72,22 +72,53 @@ const Header = ({darkMode,setdarkMode}) => {
           )}
         </motion.span>
         
+        {/* NAVIGATION LIST ITEMS*/}
         <motion.ul variants={navContentAnimation} initial ="hidden" animate="visible"  className="hidden md:flex ">
-            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Home</motion.li>
-            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">About</motion.li>
-            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Projects</motion.li>
-            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">Contact</motion.li> 
+            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">
+            <Link activeClass="active" to="HeroSection" spy={true} smooth={true} offset={-100} duration={500}> Home</Link>
+              </motion.li>
+            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">
+            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-210} duration={500}> About</Link>
+
+              </motion.li>
+            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">
+            <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-200} duration={500}> Projects</Link>
+
+              </motion.li>
+            <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-3 px-2  hover:bg-amber-600 rounded-lg cursor-pointer border-2 border-slate-900 font-semibold dark:border-white dark:text-white">
+            <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-60} duration={500}> Contact</Link>
+
+              </motion.li> 
         </motion.ul>
       </motion.nav>
       {showMenuList ? (
-        <ul className="  w-screen h-[90vh]  py-10 flex flex-col items-center bg-[#dfddddcb] rounded-b-lg shadow-md shadow-black absolute right-0 top-[10vh] z-20">
-          {menuItems.map((menuItem) => {
-            return (
+        <ul className="  w-screen h-[90vh]  py-10 flex flex-col items-center bg-[#dfddddcb] rounded-b-lg shadow-md shadow-black fixed right-0 top-[10vh] z-20 ">
+         
               <li className=" text-xl my-3 px-5 font-bold hover:border-r-2 hover:border-b-2 hover:shadow-md rounded-md border-amber-500  text-slate-900 md:mb-10 md:text-xl">
-                {menuItem}
+            <Link activeClass="active" to="HeroSection" spy={true} smooth={true} offset={-100} duration={500} onClick={()=>{setShowMenuList(false)}}> Home</Link>
+               
               </li>
-            );
-          })}
+
+              <li className=" text-xl my-3 px-5 font-bold hover:border-r-2 hover:border-b-2 hover:shadow-md rounded-md border-amber-500  text-slate-900 md:mb-10 md:text-xl">
+              <Link activeClass="active" to="about" spy={true} smooth={true} offset={-210} duration={500} onClick={()=>{setShowMenuList(false)}}> About</Link>
+
+               
+              </li>
+
+              <li className=" text-xl my-3 px-5 font-bold hover:border-r-2 hover:border-b-2 hover:shadow-md rounded-md border-amber-500  text-slate-900 md:mb-10 md:text-xl">
+              <Link activeClass="active" to="projects" spy={true} smooth={true} offset={-200} duration={500} onClick={()=>{setShowMenuList(false)}}> Projects</Link>
+
+
+               
+              </li>
+
+              <li className=" text-xl my-3 px-5 font-bold hover:border-r-2 hover:border-b-2 hover:shadow-md rounded-md border-amber-500  text-slate-900 md:mb-10 md:text-xl">
+              <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-60} duration={500} onClick={()=>{setShowMenuList(false)}}> Contact</Link>
+
+
+               
+              </li>
+       
         </ul>
       ) : null}
     </motion.div>

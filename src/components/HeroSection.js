@@ -12,7 +12,7 @@ const buttonAnimation = {
 };
 const HeroSection = () => {
   return (
-    <div className="h-[100vh] w-full md:flex">
+    <div id = "HeroSection" className="h-[100vh] w-full md:flex">
       <div className="flex mt-20 flex-col w-full items-center py-20 md:flex-row-reverse md:justify-around">
         <motion.div
           initial={{ opacity: 0, x: "100vw" }}

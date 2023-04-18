@@ -25,7 +25,7 @@ const [displayHover, setdisplayHover] = useState(false)
   
         
         
-                 <div className="w-[80vw] flex flex-col mb-5 md:w-[30vw] md:mx-2 relative " key={id}>
+                 <div id="projects" className="w-[80vw] flex flex-col mb-5 md:w-[30vw] md:mx-2 relative " key={id}>
                 <h4 className="font-logoFont capitalize text-center font-bold text-2xl py-2  rounded-t-2xl bg-slate-200">{name}</h4>
                 
                 <img src= {screenShot} className= "w-full h-full  object-fill md:h-72" />

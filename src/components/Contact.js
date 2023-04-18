@@ -4,7 +4,7 @@ import { MdPermContactCalendar } from "react-icons/md";
 const Contact = () => {
   return (
 
-<div className="login-box">
+<div id="contact" className="login-box">
     <div className='flex flex-col justify-center items-center'>
   <h1 className='text-xl font-textFont font-semibold text-slate-900 my-1 md:text-2xl md:my-3 dark:text-white'>let's work together </h1>
         <div className='flex items-center'>
