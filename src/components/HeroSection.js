@@ -62,7 +62,7 @@ const HeroSection = () => {
                 transition="transition"
                 className="mr-2 w-8 h-8 flex items-center justify-center rounded-full border-slate-900  hover:bg-amber-600 cursor-pointer border-2 md:w-12 md:h-12 md:border-4 md:mr-5 dark:border-white"
               >
-                <HiMail className="text-slate-900 text-xl cursor-pointer md:w-8 md:h-8 dark:text-white" />
+              <a href="mailto:raheemibrohim@gmail.com"> <HiMail className="text-slate-900 text-xl cursor-pointer md:w-8 md:h-8 dark:text-white" /></a>
               </motion.li>
               <motion.li
                 variants={buttonAnimation}
@@ -70,7 +70,7 @@ const HeroSection = () => {
                 transition="transition"
                 className="mr-2 w-8 h-8 flex items-center justify-center rounded-full border-slate-900  hover:bg-amber-600 cursor-pointer border-2 md:w-12 md:h-12 md:border-4 md:mr-5 dark:border-white"
               >
-                <FaLinkedin className="text-slate-900 text-xl cursor-pointer md:w-8 md:h-8 dark:text-white" />
+                <a href="https://www.linkedin.com/in/raheem-ibrahim-037940136/"> <FaLinkedin className="text-slate-900 text-xl cursor-pointer md:w-8 md:h-8 dark:text-white" /></a>
               </motion.li>
               <motion.li
                 variants={buttonAnimation}
@@ -78,7 +78,7 @@ const HeroSection = () => {
                 transition="transition"
                 className="mr-2 w-8 h-8 flex items-center justify-center rounded-full border-slate-900  hover:bg-amber-600 cursor-pointer border-2 md:w-12 md:h-12 md:border-4 md:mr-5 dark:border-white"
               >
-                <FaGithub className="text-slate-900 text-xl cursor-pointer md:w-8 md:h-8 dark:text-white" />
+                 <a href="https://www.github.com/hebrohim"><FaGithub className="text-slate-900 text-xl cursor-pointer md:w-8 md:h-8 dark:text-white" /> </a>
               </motion.li>
             </ul>
           </section>

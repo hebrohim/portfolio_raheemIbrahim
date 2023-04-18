@@ -49,13 +49,13 @@ const Header = ({darkMode,setdarkMode}) => {
             <FaWhatsapp className="text-slate-900 text-md cursor-pointer dark:text-white" />
           </motion.li>
           <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
-            <HiMail className="text-slate-900 text-md cursor-pointer dark:text-white" />
+          <a href="mailto:raheemibrohim@gmail.com">  <HiMail className="text-slate-900 text-md cursor-pointer dark:text-white" /></a>
           </motion.li>
           <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
-            <FaLinkedin className="text-slate-900 text-md cursor-pointer dark:text-white" />
+           <a href="https://www.linkedin.com/in/raheem-ibrahim-037940136/"> <FaLinkedin className="text-slate-900 text-md cursor-pointer dark:text-white" /></a>
           </motion.li>
           <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
-            <FaGithub className="text-slate-900 text-md cursor-pointer dark:text-white" />
+          <a href="https://www.github.com/hebrohim">  <FaGithub className="text-slate-900 text-md cursor-pointer dark:text-white" /></a>
           </motion.li>
         </motion.ul>
         <motion.span variants={navContentAnimation} initial ="hidden" animate="visible"   className="text-sm mr-[1.4rem] flex items-center text-black font-medium absolute right-0 bottom-0 hover:cursor-pointer hover:text-black dark:text-white" onClick={()=>{setdarkMode(!darkMode)}}> <MdDarkMode/>
