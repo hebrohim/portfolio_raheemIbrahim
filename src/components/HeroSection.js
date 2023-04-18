@@ -4,7 +4,8 @@ import me from "./images/me2.png";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { HiMenuAlt3, HiMail, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
-
+import { Link } from "react-scroll";
+import resume from "./raheemIbrahim.pdf"
 // BUTTON ANIMATION
 const buttonAnimation = {
   whileHover: { scale: 1.1, boxShadow: "0px 0px 10px black", originX: 0 },
@@ -42,8 +43,8 @@ const HeroSection = () => {
             FrontEnd Developer
           </h4>
           <div hero_btns className="mt-10 flex w-full justify-around ">
-            <Button content="Contact me" />
-            <Button content="Resume" className="ml-10" />
+          <Link activeClass="active" to="contact" spy={true} smooth={true} offset={-60} duration={500}><Button content="Contact me" /></Link>
+            <a href={resume} download = "001RaheemIbrahim"><Button content="Resume" className="ml-10" /></a>
           </div>
 
           <section className="social_media">
