@@ -30,19 +30,19 @@ const [displayHover, setdisplayHover] = useState(false)
                 
                 <img src= {screenShot} className= "w-full h-full  object-fill md:h-72" />
               { displayHover?
-               <div className="bg-[#ffffffda] text-amber-600 absolute w-full rounded-t-2xl h-1/2 md:h-[30vh] p-20">
+               <motion.div initial ={{opacity:0}} whileInView={{opacity:1,x:0,transition:{duration:2}}}  className="bg-[#ffffffda] text-amber-600 absolute w-full rounded-t-2xl h-1/2 md:h-[30vh] p-20">
               <a href={github}><span className="text-md font-semibold flex items-center">Source code<FaGithub className="ml-1"/></span></a> 
               <a href={liveProject}><span className="text-md font-semibold flex items-center">link to live Project<FaGithub className="ml-1"/></span></a> 
-               </div> :null
+               </motion.div> :null
                 }
 
    { showContent?<button onClick={()=>{setshowContent(!showContent); displayHoverBox()}} className= " bg-amber-600 p-2 text-xl rounded-b-2xl flex justify-center items-center font-semibold">Expand <MdExpandMore/></button>:
     <div>
-                <div className=" p-5 bg-white">
+                <motion.div className=" p-5 bg-white" initial ={{opacity:0}} whileInView={{opacity:1,x:0,transition:{duration:2}}}  >
                     <p className="text-sm text-justify md:text-base ">
                         {description}
                     </p>
-                </div>
+                </motion.div>
                     <button onClick={()=>{setshowContent(!showContent); hideHoverBox()}} className= "w-full bg-amber-600 p-2 text-xl rounded-b-2xl flex items-center font-semibold justify-center  ">Hide <MdExpandLess/></button>
 </div>
 }
