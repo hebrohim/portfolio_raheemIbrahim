@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 // import logo from "./images/icons8-source-code-100.png"
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import logo from "./images/icons8-developer-80.png";
 import { HiMenuAlt3, HiMail, HiX } from "react-icons/hi";
 import { MdDarkMode } from "react-icons/md";
@@ -45,9 +45,7 @@ const Header = ({darkMode,setdarkMode}) => {
         </motion.div>
 
         <motion.ul variants={navContentAnimation} initial ="hidden" animate="visible"  className=" hidden  md:flex w-full justify-end mr-10">
-          <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
-            <FaWhatsapp className="text-slate-900 text-md cursor-pointer dark:text-white" />
-          </motion.li>
+       
           <motion.li variants={buttonAnimation} whileHover = "whileHover" transition= "transition" className="mr-2 w-6 h-6 flex items-center justify-center rounded-lg border-slate-900  hover:bg-amber-600 cursor-pointer border-2 dark:border-white">
           <a href="mailto:raheemibrohim@gmail.com">  <HiMail className="text-slate-900 text-md cursor-pointer dark:text-white" /></a>
           </motion.li>

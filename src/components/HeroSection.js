@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import me from "./images/me2.png";
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedin} from "react-icons/fa";
 import { HiMenuAlt3, HiMail, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
@@ -49,14 +49,7 @@ const HeroSection = () => {
 
           <section className="social_media">
             <ul className="flex w-full justify-end mt-10">
-              <motion.li
-                variants={buttonAnimation}
-                whileHover="whileHover"
-                transition="transition"
-                className="mr-2 w-8 h-8 flex items-center justify-center rounded-full border-slate-900  hover:bg-amber-600 cursor-pointer border-2 md:w-12 md:h-12 md:border-4 md:mr-5 dark:border-white"
-              >
-                <FaWhatsapp className="text-slate-900 text-xl cursor-pointer md:w-8 md:h-8 dark:text-white " />
-              </motion.li>
+             
               <motion.li
                 variants={buttonAnimation}
                 whileHover="whileHover"

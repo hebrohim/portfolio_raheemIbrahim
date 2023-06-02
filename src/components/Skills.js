@@ -39,7 +39,7 @@ const Skills = () => {
     },
   ];
   return (
-    <motion.div initial ={{opacity:0,x:"0"}} whileInView={{opacity:1,x:0,transition:{delay:1,duration:5,when :"beforeChildren"}}}  className=" p-5 text-center">
+    <motion.div initial ={{opacity:0,x:"-200"}} whileInView={{opacity:1,x:0,transition:{duration:1,when :"beforeChildren"}}}  className=" p-5 text-center">
       <section className="mb-5">
         <h1 className="text-xl font-textFont font-semibold text-slate-900 my-1 md:text-2xl md:my-3 dark:text-white">
           What i can do for you

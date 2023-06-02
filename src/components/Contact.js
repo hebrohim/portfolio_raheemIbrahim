@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { motion } from 'framer-motion';
 import { MdPermContactCalendar } from "react-icons/md";
 const Contact = () => {
   return (
@@ -13,7 +13,7 @@ const Contact = () => {
       </div>
 
       </div>
-  <form className='my-5  w-[80vw]  py-10 px-5  mx-auto box-border rounded-2xl shadow-2xl'>
+  <motion.form initial ={{opacity:0,x:"200"}} whileInView={{opacity:1,x:0,transition:{duration:2,when :"beforeChildren"}}}  className='my-5  w-[80vw]  py-10 px-5  mx-auto box-border rounded-2xl shadow-2xl'>
     <div className="user-box ">
       <input required="" name="" type="text" className='dark:text-white'/>
       <label className='dark:text-white' >Full name</label>
@@ -37,7 +37,7 @@ const Contact = () => {
       <span></span>
       Submit
     </a>
-  </form>
+  </motion.form>
 
 </div>
 

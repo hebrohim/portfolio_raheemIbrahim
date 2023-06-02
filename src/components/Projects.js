@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { MdExpandMore,MdExpandLess} from "react-icons/md";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 const Projects = ({project,loading}) => {
     const [showContent, setshowContent] = useState(true)
 
@@ -25,7 +25,7 @@ const [displayHover, setdisplayHover] = useState(false)
   
         
         
-                 <div id="projects" className="w-[80vw] flex flex-col mb-5 md:w-[30vw] md:mx-2 relative " key={id}>
+                 <motion.div initial ={{opacity:0,x:"-200"}} whileInView={{opacity:1,x:0,transition:{delay:1, duration:1,when :"beforeChildren"}}}  id="projects" className="w-[80vw] flex flex-col mb-5 md:w-[30vw] md:mx-2 relative " key={id}>
                 <h4 className="font-logoFont capitalize text-center font-bold text-2xl py-2  rounded-t-2xl bg-slate-200">{name}</h4>
                 
                 <img src= {screenShot} className= "w-full h-full  object-fill md:h-72" />
@@ -47,7 +47,7 @@ const [displayHover, setdisplayHover] = useState(false)
 </div>
 }
                 
-                </div>
+                </motion.div>
 
               
         
