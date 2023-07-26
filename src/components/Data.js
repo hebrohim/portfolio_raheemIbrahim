@@ -72,7 +72,7 @@ export const Data = [
         "description": "Provides details of user",
         "technology": ["ReactJs","React Pagination","bootstrap","css"],
         "screenShot":"https://i.postimg.cc/xCQK6qZ0/user.png",
-        "liveProject":"https://hebrohim.github.io/TestimonialPageGridCss/",
+        "liveProject":"https://userbasedashboard.netlify.app/",
         "github":"https://github.com/hebrohim/userBaseDashBoard"
       },
       {
