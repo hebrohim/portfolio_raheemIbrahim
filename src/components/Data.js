@@ -11,6 +11,15 @@ export const Data = [
   },
   {
     "id": 2,
+    "name": "Elysium Hotel",
+    "description": "Elysium Hotel landing page",
+    "technology": ["react","TailwindCss"],
+    "screenShot":"https://i.postimg.cc/G342fFMV/elysium.png",
+    "liveProject":"https://elysium-hotel.vercel.app/",
+    "github":"https://github.com/hebrohim/Elysium-Hotel-"
+  },
+  {
+    "id": 3,
     "name": "Country Api",
     "description": "A react application that shows details about ALL countries across the word including their flag,population,currency etc",
     "technology": ["React","TailwindCss"],
@@ -19,7 +28,7 @@ export const Data = [
     "github":"https://i.postimg.cc/QCVPkKqj/country-Api.png"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Weather App",
     "description": "A JavaScript Weather Application to get weather condition of any city across the world",
     "technology": ["React","Css","media Query"],
@@ -28,7 +37,7 @@ export const Data = [
     "github":"https://github.com/hebrohim/weatherApp"
   },
       {
-        "id": 4,
+        "id": 5,
         "name": "accordion",
         "description": "A react based accordion component that allows user to show and hide sections of related content on a page.",
         "technology": ["react","css"],
@@ -36,15 +45,7 @@ export const Data = [
         "liveProject":"https://accordion-sepia.vercel.app/",
         "github":"https://github.com/hebrohim/Accordion"
       },
-      {
-        "id": 5,
-        "name": "birthDayReminder",
-        "description": "An application that shows a list of friend's birthdays and reminder",
-        "technology": ["react","css"],
-        "screenShot":"https://i.postimg.cc/nzpbYcRM/birth-Day-Reminder.png",
-        "liveProject":"https://ibrahimbirthdayreminder.netlify.app/",
-        "github":"https://github.com/hebrohim/birthDayReminder"
-      },
+     
       {
         "id": 6,
         "name": "React Menu page",
@@ -67,12 +68,12 @@ export const Data = [
     
       {
         "id": 8,
-        "name": "Testimonial Page",
-        "description": "A responsive testimonial page using CSS grid.",
-        "technology": ["Html","media Query","css grid"],
-        "screenShot":"https://i.postimg.cc/28yWP1fR/testimonial-Page.png",
+        "name": "Users Dashboard",
+        "description": "Provides details of user",
+        "technology": ["ReactJs","React Pagination","bootstrap","css"],
+        "screenShot":"https://i.postimg.cc/xCQK6qZ0/user.png",
         "liveProject":"https://hebrohim.github.io/TestimonialPageGridCss/",
-        "github":"https://github.com/hebrohim/TestimonialPageGridCss"
+        "github":"https://github.com/hebrohim/userBaseDashBoard"
       },
       {
         "id": 9,

@@ -3,7 +3,7 @@ import { React, useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import logo from "./images/icons8-developer-80.png";
 import { HiMenuAlt3, HiMail, HiX } from "react-icons/hi";
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode,MdLightMode } from "react-icons/md";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 const navBarAnimation = {
@@ -56,9 +56,9 @@ const Header = ({darkMode,setdarkMode}) => {
           <a href="https://www.github.com/hebrohim">  <FaGithub className="text-slate-900 text-md cursor-pointer dark:text-white" /></a>
           </motion.li>
         </motion.ul>
-        <motion.span variants={navContentAnimation} initial ="hidden" animate="visible"   className="text-sm mr-[1.4rem] flex items-center text-black font-medium absolute right-0 bottom-0 hover:cursor-pointer hover:text-black dark:text-white" onClick={()=>{setdarkMode(!darkMode)}}> <MdDarkMode/>
+        <motion.span variants={navContentAnimation} initial ="hidden" animate="visible"   className=" bg-amber-600 rounded-full p-1 mr-[4rem] flex items-center justify-center text-black font-medium absolute right-0 bottom-0 w-5 h-5 top-[4rem] hover:cursor-pointer hover:text-black dark:text-white" onClick={()=>{setdarkMode(!darkMode)}}> 
        { darkMode?
-        "lightMode":"DarkMode"}
+        <MdLightMode/>:<MdDarkMode/>}
         </motion.span> 
 
      

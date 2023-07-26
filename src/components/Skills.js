@@ -16,6 +16,7 @@ import {
   SiJavascript,
   SiPostman,
   SiReact,
+  SiTypescript
 } from "react-icons/si";
 import { TbBrandFramerMotion, TbJson } from "react-icons/tb";
 import {motion} from "framer-motion"
@@ -59,6 +60,7 @@ const Skills = () => {
         <Card icon={<FaSass className="text-amber-600 text-7xl" />} name = "Sass" />
         <Card icon={<SiTailwindcss className="text-amber-600 text-7xl" />} name = "Tailwind" />
         <Card icon={<SiJavascript className="text-amber-600 text-7xl" />} name = "Jacascript" />
+        <Card icon={<SiTypescript className="text-amber-600 text-7xl" />} name = "TypeScript" />
         <Card icon={<SiPostman className="text-amber-600 text-7xl" />} name = "Postman" />
         <Card icon={<FaNpm className="text-amber-600 text-7xl" />} name = "Npm" />
         <Card icon={<TbBrandFramerMotion className="text-amber-600 text-7xl" />} name = "Framer Motion"/>
